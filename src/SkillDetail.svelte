@@ -7,35 +7,38 @@
 
     /* ***** Properties ***** */
 
-    export let title = "Candle making";
-
-    export let proficiency = 0;
+    export let data = {
+        title: "Candle making",
+        proficiency: 0
+    }
 
     /* ***** Event Handlers ***** */
 
     const onClickDecrement = (event) => {
-        if( PROFICIENCY_MIN < proficiency ) {
-            proficiency -= 1;
+        if( PROFICIENCY_MIN < data.proficiency ) {
+            data.proficiency -= 1;
         }
     };
 
     const onClickIncrement = (event) => {
-        if( proficiency < PROFICIENCY_MAX ) {
-            proficiency += 1;
+        if( data.proficiency < PROFICIENCY_MAX ) {
+            data.proficiency += 1;
         }
     };
 
     /* ***** Reactive Members ***** */
 
-    $: proficiencyClassName = `level_${proficiency}`;
+    $: proficiencyClassName = `level_${data.proficiency}`;
 
-    $: canDecrement = (PROFICIENCY_MIN < proficiency);
+    $: proficiencyTitle = data.title;
 
-    $: canIncrement = (proficiency < PROFICIENCY_MAX);
+    $: canDecrement = (PROFICIENCY_MIN < data.proficiency);
+
+    $: canIncrement = (data.proficiency < PROFICIENCY_MAX);
 </script>
 
 <div class="skillDetail">
-    <div class="skillName">{title}</div>
+    <div class="skillName">{proficiencyTitle}</div>
 
     <div class="proficiency">
         <button on:click={onClickDecrement} disabled={!canDecrement}>-</button>

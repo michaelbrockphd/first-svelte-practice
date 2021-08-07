@@ -83,7 +83,7 @@
 
     <div class="skills_list">
         {#each data as d}
-            <SkillDetail {...d} />
+            <SkillDetail data={d} />
         {/each}
     </div>
 
