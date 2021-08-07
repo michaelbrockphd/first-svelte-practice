@@ -1,95 +1,10 @@
 <script>
-	import SkillDetail from './SkillDetail.svelte';
-
-    const data = [ {
-            "title": "ASP.NET (MVC and Razor)",
-            "proficiency": 6
-        }, {
-            "title": "Autofac",
-            "proficiency": 6
-        }, {
-            "title": "C/C++",
-            "proficiency": 4
-        }, {
-            "title": "C#",
-            "proficiency": 6
-        }, {
-            "title": "CSS",
-            "proficiency": 5
-        }, {
-            "title": "Docker",
-            "proficiency": 3
-        }, {
-            "title": "Entity Framework (4 and up)",
-            "proficiency": 6
-        }, {
-            "title": "Golang",
-            "proficiency": 3
-        }, {
-            "title": "HTML",
-            "proficiency": 6
-        }, {
-            "title": "Java",
-            "proficiency": 4
-        }, {
-            "title": "Javascript",
-            "proficiency": 6
-        }, {
-            "title": "jQuery (plus jQuery UI)",
-            "proficiency": 6
-        }, {
-            "title": "Knockout.JS",
-            "proficiency": 6
-        }, {
-            "title": "Moq",
-            "proficiency": 5
-        }, {
-            "title": "Microsoft SQL Server",
-            "proficiency": 5
-        }, {
-            "title": "Node.JS",
-            "proficiency": 2
-        }, {
-            "title": "NUnit",
-            "proficiency": 6
-        }, {
-            "title": "React",
-            "proficiency": 3
-        }, {
-            "title": "BASH Scripting",
-            "proficiency": 4
-        }, {
-            "title": "Powershell Scripting",
-            "proficiency": 6
-        } ];
+	import EmployeeBuilder from './EmployeeBuilder.svelte';
 </script>
 
 <main>
-    {#each data as d}
-	    <SkillDetail {...d}/>
-    {/each}
+    <EmployeeBuilder />
 </main>
 
 <style type="text/scss">
-    /*$fontColourOrange: #ff3e00;
-
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-
-        h1 {
-            color: $fontColourOrange;
-            text-transform: uppercase;
-            font-size: 4em;
-            font-weight: 100;
-        }
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}*/
 </style>
